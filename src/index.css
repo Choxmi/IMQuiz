@@ -1,0 +1,276 @@
+/* Shared */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  /*background: radial-gradient(ellipse farthest-corner at center top, #f39264 0%, #f2606f 100%);*/
+
+  font-family: sans-serif;
+  overflow: hidden;
+}
+
+.container {
+  position: relative;
+  max-width: 800px;
+  margin-left: 200px;
+  /*background: radial-gradient(ellipse farthest-corner at center top, #f39264 0%, #f2606f 100%);*/
+  border-radius: 3px;
+}
+
+@media (min-width: 769px) {
+  .container {
+    margin: 2.5rem auto;
+  }
+}
+
+/* Result Component */
+.result {
+  padding: 1.5rem 2.5rem;
+}
+
+/* Quiz Component */
+.answerOptions {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+/* QuestionCount Component */
+.questionCount {
+  padding: 1.5rem 2.5rem 0;
+  font-size: 14px;
+}
+
+/* Question Component */
+.question {
+  margin: 0;
+  padding: 0.5rem 2.5rem 1.5rem 2.5rem;
+  font-size: 20px;
+}
+
+/* AnswerOption Component */
+.answerOption {
+  border-top: 1px solid #eee;
+}
+
+.answerOption:hover {
+  background-color: #c24448;
+  transform: scaleX(1.06) scaleY(1.03);
+  transition: all .35s ease-in-out;
+}
+
+.radioCustomButton {
+    position: absolute;
+    width: auto;
+    opacity: 0;
+}
+
+.radioCustomButton,
+.radioCustomLabel {
+    display: inline-block;
+    vertical-align: middle;
+    cursor: pointer;
+}
+
+.radioCustomLabel {
+    position: relative;
+    width: 100%;
+    margin: 0;
+    padding: 1.5rem 2.5rem 1.5rem 5rem;
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+.radioCustomButton ~ .radioCustomLabel:before {
+    position: absolute;
+    top: 20px;
+    left: 38px;
+    width: 28px;
+    height: 28px;
+    content: '';
+    display: inline-block;
+    vertical-align: middle;
+    background: #fff;
+    border: 1px solid #bbb;
+    border-radius: 50%;
+    transition: all 0.3s;
+}
+
+.radioCustomButton:checked ~ .radioCustomLabel:before {
+    content: '';
+    background: #8BC53F url(./svg/icon-check.png) no-repeat;
+    background-size: 27px;
+    border-color: #8BC53F;
+}
+
+/* Animation */
+.fade-enter {
+    opacity: 0;
+}
+
+.fade-enter.fade-enter-active {
+    opacity: 1;
+    transition: opacity 0.5s ease-in-out 0.3s;
+}
+
+.fade-leave {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    opacity: 1;
+}
+
+.fade-leave.fade-leave-active {
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.fade-appear {
+    opacity: 0;
+}
+
+.fade-appear.fade-appear-active {
+    opacity: 1;
+    transition: opacity 0.5s ease-in-out;
+}
+
+#background-video{
+
+height: 60%;
+width: 60%;
+top: 0;
+padding: none;
+
+}
+
+.centerdiv{
+  margin: auto;
+  display: block;
+}
+
+.filler{
+  height: 1000px;
+}
+
+.form-reg{
+  width: 50%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.form-input{
+  width: 100%;
+  padding: 12px 20px;
+  margin: 5px 0;
+  box-sizing: border-box;
+  border: 2px solid #cecece;
+  border-radius: 4px;
+}
+
+.form-label{
+  color: #3CBC8D;
+}
+
+.wrapper {
+    text-align: center;
+}
+
+.form-button{
+  background-color: #3CBC8D;
+  border: none;
+  color: white;
+  margin: 10px 0;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  top: 50%;
+}
+
+.lblshow{
+  visibility: visible;
+  color: red;
+}
+
+.lblhide{
+  visibility: hidden;
+}
+
+.wrapperz {
+    display: block;
+    height: 100%;
+}
+
+#c1, #c2, #c3 {
+  float: left;
+  width: 33%;
+}
+
+.thanks{
+  text-align: center;
+  padding: 5px;
+  color: red;
+  font-size: 30px;
+}
+
+.placeholder-one{
+  width: 100%;
+  background-color: #ffd400;
+  text-align: center;
+  display: table;
+  vertical-align: middle;
+}
+.placeholder-one-backup{
+  width: 100%;
+  background-color: #ffd400;
+  text-align: center;
+  display: table;
+  vertical-align: middle;
+  height: 50px;
+}
+
+.placeholder-two{
+  width: 100%;
+  background-color: #b7b7b7;
+  text-align: center;
+  display: table;
+  vertical-align: middle;
+}
+.placeholder-two-backup{
+  width: 100%;
+  background-color: #b7b7b7;
+  text-align: center;
+  display: table;
+  vertical-align: middle;
+  height: 50px;
+}
+
+.placeholder-three{
+  background-color: #ef8f00;
+  text-align: center;
+  display: table;
+  vertical-align: middle;
+  width: 100%;
+}
+.placeholder-three-backup{
+  background-color: #ef8f00;
+  text-align: center;
+  display: table;
+  height: 50px;
+  vertical-align: middle;
+  width: 100%;
+}
+
+.bottomer{
+  position:fixed;
+  width:100%;
+  height:70px;
+  padding:5px;
+  bottom:50px;
+}
